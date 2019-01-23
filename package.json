@@ -1,0 +1,29 @@
+{
+  "name": "restt",
+  "version": "0.0.1",
+  "description": "create powerful restful services with edge workers",
+  "bin": {
+    "restt": "./bin/restt.js"
+  },
+  "main": "lib/index.js",
+  "keywords": [
+    "restt",
+    "restful",
+    "services",
+    "worker",
+    "workers",
+    "service worker",
+    "cloudflare worker",
+    "egde workers"
+  ],
+  "homepage": "https://github.com/restt#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/resttjs/restt.git"
+  },
+  "bugs": {
+    "url": "https://github.com/resttjs/restt/issues"
+  },
+  "author": "Daniel Larkin <daniel@larkin.nz>",
+  "license": "MIT"
+}
