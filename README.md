@@ -145,9 +145,9 @@ $ restt deploy helloworld-service.js
 
 Congratulations - you've succesfully built and shipped your services to the edge using [Cloudflare Workers](https://developers.cloudflare.com/workers/)with Restt!<br>
 
-You can check a more detailed overview of the above in the [hello world service repository](https://github.com/resttjs/helloworld-example).<br>
+You can check a more detailed overview of the above in the [hello world example repository](https://github.com/resttjs/helloworld-example).<br>
 
-Check out the [collection of more complex examples](https://github.com/resttjs/complex-example) which also includes a [Provider](#provider) using [Stripe](https://stripe.com) and [WorkersKV](https://developers.cloudflare.com/workers/kv/).<br>
+Check out the [store example repository](https://github.com/resttjs/store-example) which also includes a [Provider](#provider) using [Stripe](https://stripe.com) and [WorkersKV](https://developers.cloudflare.com/workers/kv/).<br>
 
 ## API Documentation
 
@@ -294,7 +294,7 @@ type ResourceConfiguration {
 `endpoint` is a required field.<br>
 `endpoint` must be a [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) which describes a URL path (and optionally query paramaters) which the resource can be accessed from.<br>
 `endpoint` must not end with a trailing slash.<br>
-`endpoint` can have required dynamic paramaters by wrapping paramaters in braces like `{param}`.<br>
+`endpoint` can contain dynamic paramaters if the paramater is wrapped in braces like `{param}`.<br>
 
 ```ts
 // A simple static endpoint
@@ -487,7 +487,7 @@ status: 200
 
 ### Provider
 
-Providers represent external API services which are needed by a [Service](#service) to (e.g. [Stripe](https://stripe.com/)).<br>
+Providers represent external API services which are needed by a [Service](#service) to form a [Response](#response) (e.g. [Stripe](https://stripe.com/)).<br>
 
 ###### stripe-provider.js
 
@@ -663,7 +663,7 @@ name: 'findCustomer'
 `endpoint` is always required.<br>
 `endpoint` must be a [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) which describes a URL path (and optionally search params) which the resource can be accessed from.<br>
 `endpoint` must not end with a trailing slash.<br>
-`endpoint` can have dynamic paramaters by using the wrapping the paramater in braces like `{param}`.<br>
+`endpoint` can contain dynamic paramaters if the paramater is wrapped in braces like `{param}`.<br>
 
 ```ts
 // A static endpoint
@@ -733,30 +733,12 @@ headers: {
 
 ##### headers.equals(header, value)
 
-Checks whether a specific header matches a value and returns `true` if the `header` matches the `value`.<br>
-
-###### header
-`header` is a required field.<br>
-`header` must be a [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String).<br>
-`header` must be lowercase.<br>
-
-###### value
-`value` is a required field.<br>
-`value` must be a [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String).<br>
+Checks whether a specific `header` (e.g. `authorization`) equals or matches a `value` (e.g. `secret key`) and returns `true` if so.<br>
 
 
 ##### headers.contains(header, value)
 
-Checks whether a specific header matches a value and returns `true` if the `header` contains the `value`.<br>
-
-###### header
-`header` is a required field.<br>
-`header` must be a [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String).<br>
-`header` must be lowercase.<br>
-
-###### value
-`value` is a required field.<br>
-`value` must be a [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String).<br>
+Checks whether a specific `header` (e.g. `authorization`) contains a `value` (e.g. `secret key`) and returns `true` if so.<br>
 
 ### CLI Documentation
 
