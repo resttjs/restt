@@ -10,8 +10,11 @@
 // Attempt to load Restt-CLI
 try {
 
-  // Import and execute Restt-CLI
-  require('restt-cli/bin/restt')({
+  // Import Restt-CLI 
+  const cli = require('restt-cli/bin/restt');
+  
+  // Execute the action on the CLI
+  cli.execute({
     action: process.argv[2],
     script: process.argv[3]
   });

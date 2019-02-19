@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://github.com/resttjs/restt" target="_blank">
+  <a href="https://restt.io" target="_blank">
     <img src="https://i.imgur.com/jvsfw5c.png">
   </a>
 </p>
@@ -29,18 +29,6 @@
 <p align="center">
   <a href="https://www.patreon.com/join/larkin_nz/checkout?rid=3253979">Become a Partner</a>
 </p>
-
-***
-
-<h3 align="center">Generous Supporters</h3>
-
-<p align="center">No generous supporters yet!<p>
-
-<p align="center">
-  <a href="https://www.patreon.com/join/larkin_nz/checkout?rid=3211209">Become a Generous Supporter</a>
-</p>
-
-***
 
 <h3 align="center">Supporters</h3>
 
