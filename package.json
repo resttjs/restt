@@ -1,6 +1,6 @@
 {
   "name": "restt",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "create powerful restful services with edge workers",
   "bin": {
     "restt": "./bin/restt.js"
